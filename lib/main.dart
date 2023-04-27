@@ -1,9 +1,12 @@
 import 'package:calculate_steps/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // final SharedPreferences prefs = await SharedPreferences.getInstance();
   runApp(const MyApp());
 }
 

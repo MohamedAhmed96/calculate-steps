@@ -17,9 +17,6 @@ class HomeScreen extends StatelessWidget {
             children: [
               const Text('Your total Steps'),
               Text(stepsController.totalSteps.toString()),
-              stepsController.inSession
-                  ? Text(stepsController.steps.toString())
-                  : const Text(''),
               Container(
                 height: 5.h,
                 width: 35.w,
@@ -29,12 +26,12 @@ class HomeScreen extends StatelessWidget {
                 child: Center(
                   child: InkWell(
                     onTap: () {
-                      stepsController.inSession
-                          ? stepsController.resetSessionSteps()
-                          : stepsController.startSessionSteps();
+                      // stepsController.inSession
+                      //     ? stepsController.resetSessionSteps()
+                      //     : stepsController.startSessionSteps();
                     },
                     child: Text(
-                      stepsController.inSession ? 'Reset' : 'Start',
+                      stepsController.todaySteps.toString(),
                     ),
                   ),
                 ),
