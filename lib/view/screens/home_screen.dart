@@ -15,27 +15,27 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('Your total Steps'),
-              Text(stepsController.totalSteps.toString()),
-              Container(
-                height: 5.h,
-                width: 35.w,
-                decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(3.w)),
-                child: Center(
-                  child: InkWell(
-                    onTap: () {
-                      // stepsController.inSession
-                      //     ? stepsController.resetSessionSteps()
-                      //     : stepsController.startSessionSteps();
-                    },
-                    child: Text(
-                      stepsController.todaySteps.toString(),
-                    ),
-                  ),
-                ),
-              )
+              const Text('Your Steps'),
+              Text(stepsController.getSteps().toString()),
+              // Container(
+              //   height: 5.h,
+              //   width: 35.w,
+              //   decoration: BoxDecoration(
+              //       color: Colors.blue,
+              //       borderRadius: BorderRadius.circular(3.w)),
+              //   child: Center(
+              //     child: InkWell(
+              //       onTap: () {
+              //         // stepsController.inSession
+              //         //     ? stepsController.resetSessionSteps()
+              //         //     : stepsController.startSessionSteps();
+              //       },
+              //       child: Text(
+              //         stepsController.todaySteps.toString(),
+              //       ),
+              //     ),
+              //   ),
+              // )
             ],
           ),
         );
